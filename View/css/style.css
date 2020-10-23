@@ -1,0 +1,291 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    background-image: url(../images/bg.jpg);
+    background-repeat: repeat;
+    margin: 0px 0px 0px 0px;
+}
+
+/* Style the navbar */
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Active/current link */
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnavRight {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+/* Navbar links */
+.topnavRight a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.topnavRight a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Active/current link */
+.topnavRight a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.logoImage {
+    float: left;
+    display: block;
+    width: 2%;
+    height: 2%;
+    object-fit: contain;
+}
+
+/* Style the input container */
+.topnav .login-container {
+    float: right;
+    display: inline-block;
+}
+
+.login-container label, .login-container input, .login-container button {
+    display: flex;
+    margin-left: 160px;
+}
+
+/* Style the input field inside the navbar */
+.login-container input {
+
+    padding: 6px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    border: none;
+    width: 250px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+
+/* Style the button inside the input container */
+.topnav .login-container button {
+
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .login-container button:hover {
+    background: #ccc;
+}
+
+
+.topnav .register-container {
+    float: right;
+    display: inline-block;
+}
+
+.register-container label, input, button {
+    display: flex;
+    margin-left: 180px;
+}
+
+/* Style the input field inside the navbar */
+.register-container input {
+
+    padding: 6px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    border: none;
+    width: 250px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+
+/* Style the button inside the input container */
+.topnav .register-container button {
+
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .register-container button:hover {
+    background: #ccc;
+}
+
+.search-container label,  .search-container input, .search-container button {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+
+.search-container input {
+
+    padding: 6px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    border: none;
+    width: 250px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+
+/* Style the button inside the input container */
+.topnav .search-container button {
+
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: #ccc;
+}
+
+
+.Main {
+    border-radius: 25px;
+    width: 900px;
+    height: 500px;
+    float: right;
+    font-size: 0.9em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    background-color: rgba(0, 50, 150, 0.3);
+
+}
+
+
+
+.Secondary {
+    border-radius: 25px;
+    width: 600px;
+    height: 400px;
+    float: left;
+    justify-content: left;
+    text-align: -moz-left;
+    font-size: 0.9em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 50, 150, 0.3);
+
+}
+
+.MainLogin {
+    border-radius: 25px;
+    width: 600px;
+    height: 400px;
+    font-size: 0.9em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    background-color: rgba(0, 50, 150, 0.3);
+
+}
+
+.MainRegister {
+    border-radius: 25px;
+    width: 600px;
+    height: 400px;
+    font-size: 0.9em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    background-color: rgba(0, 50, 150, 0.3);
+
+}
+
+
+.Main button{
+
+    width:52px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Main button:hover{
+    background-color: #ddd;
+}
+
+.Main td, .Main th {
+    border: 1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    padding: 8px;
+}
+
+
+.Main tr:hover {
+    background-color: #ddd;
+}
+
+.Main th {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
