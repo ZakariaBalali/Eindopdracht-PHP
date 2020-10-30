@@ -27,6 +27,7 @@ if (!isset($_SESSION['LoggedIn'])) {
     <section class="topnavRight">
 
         <?php
+        //dynamically changes text from the login button when you're logged in
         if (isset($_SESSION['LoggedIn'])) {
             echo '<a href="Logout.php">Logout</a>';
         } else {
@@ -70,12 +71,12 @@ if (!isset($_SESSION['LoggedIn'])) {
             <th>First name</th>
             <th>Last name</th>
             <th>Email</th>
-            <th>password</th>
             <th>Delete User</th>
         </tr>
 
 
         <?php
+        //fills table depending on the button clicked and if you've searched for a specific person
         require_once '../Logic/UserLogic.php';
         $users = [];
         $userLogic = new UserLogic();
@@ -84,13 +85,11 @@ if (!isset($_SESSION['LoggedIn'])) {
             $users = (array)$userLogic->GetAllUsers();
         }
 
-
         if (isset($_POST['searchEmailBtn'])) {
 
             $users = (array)$userLogic->SearchUserByEmail($_POST['searchEmail']);
 
         }
-
 
         if (isset($_POST['searchNameBtn'])) {
 
@@ -104,7 +103,6 @@ if (!isset($_SESSION['LoggedIn'])) {
             echo '<td>' . $user->GetFirstName() . '</td>';
             echo '<td>' . $user->GetLastName() . '</td>';
             echo '<td>' . $user->GetEmail() . '</td>';
-            echo '<td>' . $user->GetPassword() . '</td>';
 
             echo '<td><a href="DeleteUsers.php?UserID= ' . $user->GetUserID() . '"<button type="submit" name="delete" form="deleteUser" value="Submit">Delete</button></td></a>';
             echo '</tr>';

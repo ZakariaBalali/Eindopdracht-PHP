@@ -11,7 +11,6 @@ else {
     $id = $_GET['UserID'];
 
     if ($userLogic->DeleteUser($id)) {
-
         header('Location: ../View/AdministrationUsers.php');
     } else {
         echo "<script>alert('There was en error while removing the user')</script>";

@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -48,7 +49,7 @@ require '../Logic/LoginLogic.php';
             <label>Password</label>
             <input type="password"  name="loginPassword">
             <button type="submit" name="login" form="loginForm" value="Submit">Login</button>
-            <label>Forgot Password?</label>
+            <a href = "ForgotPassword.php"<label>Forgot Password?</label></a>
         </form>
     </section>
 </section>

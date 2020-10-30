@@ -8,12 +8,9 @@ class UserLogic {
         $this->userDAL = new UserDAL();
     }
 
-
     function CloseConnection(){
         $this->userDAL->dbCloseConnection();
     }
-
-
 
     function GetAllUsers(){
         return $this->userDAL->GetAllUsersDB();
@@ -23,9 +20,8 @@ class UserLogic {
         return$this->userDAL->DeleteUser($id);
 
     }
-
     function GetUserByEmail($email){
-        return $this->userDAL->UserByEmail($email);
+        return $this->userDAL->GetUserByEmail($email);
     }
 
     function SearchUserByName($name){
@@ -35,6 +31,11 @@ class UserLogic {
     function SearchUserByEmail($email){
         return $this->userDAL->SearchUserByEmail($email);
     }
+
+    function UserPasswordReset($email){
+        return $this->userDAL->UserPasswordReset($email);
+    }
+
 
 }
 

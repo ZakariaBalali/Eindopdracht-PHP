@@ -43,7 +43,7 @@ class UserDAL
             echo 'no users found';
         }
     }
-
+    //Deletes user from database with a prepared statement
     function DeleteUser($id)
     {
         $stmt = $this->connection->prepare("DELETE FROM users WHERE userID = ?");
@@ -55,7 +55,7 @@ class UserDAL
             return false;
         }
     }
-
+    //Gets user from database with a prepared statement for the login process
     public function GetUserByEmail($email)
     {
         $stmt = $this->connection->prepare("SELECT * FROM users WHERE email = ?");
@@ -68,8 +68,7 @@ class UserDAL
             return null;
         }
     }
-
-
+    //Gets users with a certain firstname or lastname from the database using escape string to prevent sql injection
     public function SearchUserByName($name)
     {
         $name = mysqli_real_escape_string($this->connection, $name);
@@ -93,7 +92,7 @@ class UserDAL
             echo 'no users found';
         }
     }
-
+    //Gets users with a certain email from the database using escape string to prevent sql injection
     public function SearchUserByEmail($email)
     {
         $email = mysqli_real_escape_string($this->connection, $email);
@@ -116,6 +115,35 @@ class UserDAL
         } else {
             echo 'no users found';
         }
+    }
+    //Resets password from a certain email address, uses escape string to prevent sql injection and a randomizer to get a random new password
+    public function UserPasswordReset($email)
+    {
+        $newPassword = $this->generateRandomString(10);
+        $email = mysqli_real_escape_string($this->connection, $email);
+        $sql = "UPDATE users SET password = '$newPassword' where email like '$email'";
+        $this->sendNewPasswordToEmail($newPassword, $email);
+        return mysqli_query($this->connection, $sql);
+    }
+    //generates random string for the new password
+    function generateRandomString($length = 10)
+    {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+    //Sends new password to email address
+    function sendNewPasswordToEmail($newPassword, $email)
+    {
+        $subject = "Your new password";
+        // the message
+        $content = "Your new password is " . $newPassword;
+        // send email
+        mail($email, $subject, $content);
     }
 
 }

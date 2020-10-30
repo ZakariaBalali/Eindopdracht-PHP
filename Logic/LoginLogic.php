@@ -7,7 +7,7 @@ require_once dirname(__FILE__).'/../DAL/UserDAL.php';
    $userDal = new UserDAL();
    session_start();
 
-
+//goes throug login process when button is clicked
 if (isset($_POST['login']))
 {
     $_SESSION['user'] = array(
@@ -26,7 +26,7 @@ if (isset($_POST['login']))
     }
 };
 
-
+//goes through registration process when register button is clicked
 if (isset($_POST['register']))
 {
 
