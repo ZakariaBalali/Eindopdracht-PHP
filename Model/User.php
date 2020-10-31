@@ -5,13 +5,15 @@ class   User{
     private $lastName;
     private $email;
     private $password;
+    private $isAdmin;
 
-    function __construct($userID, $firstName, $lastName, $email, $password){
+    function __construct($userID, $firstName, $lastName, $email, $password, $isAdmin){
         $this->userID = $userID;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->email = $email;
         $this->password =$password;
+        $this->isAdmin = $isAdmin;
 
     }
 
@@ -52,6 +54,12 @@ class   User{
         $this->password = $password;
     }
 
+    public function getIsAdmin(){
+        return $this->isAdmin;
+    }
+    public function setIsAdmin($isAdmin){
+        return $this->isAdmin = $isAdmin;
+    }
 }
 
 ?>

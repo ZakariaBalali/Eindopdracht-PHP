@@ -1,9 +1,13 @@
 <?php
 require_once '../Logic/LoginLogic.php';
+require_once '../Logic/UserLogic.php';
 
-//checks if user is logged in
-if (!isset($_SESSION['LoggedIn'])) {
-    header('Location: ../View/Login.php');
+$user = $userLogic->SearchUserByEmail($_SESSION['email']);
+
+
+//checks if user is logged in and is admin
+if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
+    header('Location: ../View/Homepage.php');
 }
 ?>
 <!DOCTYPE HTML>
@@ -71,13 +75,14 @@ if (!isset($_SESSION['LoggedIn'])) {
             <th>First name</th>
             <th>Last name</th>
             <th>Email</th>
+            <th>Is Admin</th>
+            <th>Make Admin</th>
             <th>Delete User</th>
         </tr>
 
 
         <?php
         //fills table depending on the button clicked and if you've searched for a specific person
-        require_once '../Logic/UserLogic.php';
         $users = [];
         $userLogic = new UserLogic();
         if (isset($_POST['showAllBtn'])) {
@@ -99,10 +104,12 @@ if (!isset($_SESSION['LoggedIn'])) {
 
         foreach ($users as $user) {
             echo '<tr>';
-            echo '<td>' . $user->GetUserID() . '</td>';
-            echo '<td>' . $user->GetFirstName() . '</td>';
-            echo '<td>' . $user->GetLastName() . '</td>';
-            echo '<td>' . $user->GetEmail() . '</td>';
+            echo '<td>' . $user->getUserID() . '</td>';
+            echo '<td>' . $user->getFirstName() . '</td>';
+            echo '<td>' . $user->getLastName() . '</td>';
+            echo '<td>' . $user->getEmail() . '</td>';
+            echo '<td>' . $user->getIsAdmin() . '</td>';
+            echo '<td><a href="MakeAdmin.php?UserID= ' . $user->GetUserID() . '"<button type="submit" name="makeAdmin" form="makeUserAdmin" value="Submit">Grant Admin</button></td></a>';
 
             echo '<td><a href="DeleteUsers.php?UserID= ' . $user->GetUserID() . '"<button type="submit" name="delete" form="deleteUser" value="Submit">Delete</button></td></a>';
             echo '</tr>';

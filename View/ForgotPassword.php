@@ -1,6 +1,6 @@
 <?php
-require '../Logic/LoginLogic.php';
-require '../Logic/UserLogic.php';
+require_once '../Logic/LoginLogic.php';
+require_once '../Logic/UserLogic.php';
 
 $userLogic = new UserLogic();
 

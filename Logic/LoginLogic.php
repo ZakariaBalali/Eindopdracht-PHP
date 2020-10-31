@@ -1,24 +1,23 @@
 <?php
 require_once dirname(__FILE__).'/../DAL/LoginDAL.php';
 require_once dirname(__FILE__).'/../DAL/UserDAL.php';
-
+require_once dirname(__FILE__).'/../Logic/UserLogic.php';
 
    $loginDal = new LoginDAL();
    $userDal = new UserDAL();
+   $userLogic = new UserLogic();
    session_start();
 
-//goes throug login process when button is clicked
+//goes through login process when button is clicked
 if (isset($_POST['login']))
 {
-    $_SESSION['user'] = array(
-        'loginEmail' => $_POST['loginEmail'],
-        'loginPassword' => $_POST['loginPassword'],
-    );
+    $user = $userLogic->SearchUserByEmail($_POST['loginEmail']);
     // Check email and password in DAL layer
     if ($loginDal->UserLogin($_POST['loginEmail'], $_POST['loginPassword']))
     {
+        $_SESSION['email'] = $user[0]->getEmail();
         $_SESSION['LoggedIn'] = true;
-        header('Location: ../View/AdministrationUsers.php');
+        header('Location: ../View/Homepage.php');
     }
 
     else{

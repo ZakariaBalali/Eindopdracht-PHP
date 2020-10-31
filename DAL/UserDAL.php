@@ -23,7 +23,7 @@ class UserDAL
     //Gets user info from db and puts values into array
     function GetAllUsersDB()
     {
-        $sql = "SELECT userID, firstName, lastName, email, password FROM users";
+        $sql = "SELECT userID, firstName, lastName, email, password, isAdmin FROM users";
 
         $users = [];
         $result = mysqli_query($this->connection, $sql);
@@ -34,8 +34,8 @@ class UserDAL
                 $lastName = $row['lastName'];
                 $email = $row["email"];
                 $password = $row['password'];
-
-                $user = new User($id, $firstName, $lastName, $email, $password);
+                $isAdmin = $row['isAdmin'];
+                $user = new User($id, $firstName, $lastName, $email, $password, $isAdmin);
                 $users[] = $user;
             }
             return $users;
@@ -47,6 +47,18 @@ class UserDAL
     function DeleteUser($id)
     {
         $stmt = $this->connection->prepare("DELETE FROM users WHERE userID = ?");
+        $stmt->bind_param("i", $id);
+        try {
+            $stmt->execute();
+            return true;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
+    //Grants admin status to user
+    function MakeAdmin($id){
+        $stmt = $this->connection->prepare("UPDATE users SET isAdmin = '1' where userID = '$id'");
         $stmt->bind_param("i", $id);
         try {
             $stmt->execute();
@@ -72,7 +84,7 @@ class UserDAL
     public function SearchUserByName($name)
     {
         $name = mysqli_real_escape_string($this->connection, $name);
-        $sql = "SELECT userID, firstName, lastName, email, password FROM users WHERE firstName like '$name' or  lastName like '$name'";
+        $sql = "SELECT userID, firstName, lastName, email, password, isAdmin FROM users WHERE firstName like '$name' or  lastName like '$name'";
 
         $users = [];
         $result = mysqli_query($this->connection, $sql);
@@ -83,8 +95,8 @@ class UserDAL
                 $lastName = $row['lastName'];
                 $email = $row["email"];
                 $password = $row['password'];
-
-                $user = new User($id, $firstName, $lastName, $email, $password);
+                $isAdmin = $row['isAdmin'];
+                $user = new User($id, $firstName, $lastName, $email, $password, $isAdmin);
                 $users[] = $user;
             }
             return $users;
@@ -96,7 +108,7 @@ class UserDAL
     public function SearchUserByEmail($email)
     {
         $email = mysqli_real_escape_string($this->connection, $email);
-        $sql = "SELECT userID, firstName, lastName, email, password FROM users WHERE email like '$email'";
+        $sql = "SELECT userID, firstName, lastName, email, password, isAdmin FROM users WHERE email like '$email'";
 
         $users = [];
         $result = mysqli_query($this->connection, $sql);
@@ -107,8 +119,8 @@ class UserDAL
                 $lastName = $row['lastName'];
                 $email = $row["email"];
                 $password = $row['password'];
-
-                $user = new User($id, $firstName, $lastName, $email, $password);
+                $isAdmin = $row['isAdmin'];
+                $user = new User($id, $firstName, $lastName, $email, $password, $isAdmin);
                 $users[] = $user;
             }
             return $users;

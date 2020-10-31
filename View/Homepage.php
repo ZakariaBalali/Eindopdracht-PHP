@@ -8,16 +8,24 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
 <?php
-require '../Logic/LoginLogic.php';
-
+require_once '../Logic/LoginLogic.php';
+require_once '../Logic/UserLogic.php';
 ?>
 
 <section class="topnav">
     <img src="images/logo.png" alt="Airplane" title="AirplaneLogo" class="logoImage">
     <a class="active" href="Homepage.php">Home</a>
-    <a href="AdministrationUsers.php">Admin</a>
+    <?php
+    if(isset($_SESSION['LoggedIn'])){
+    $user = $userLogic->SearchUserByEmail($_SESSION['email']);
+    if ($user[0]->getIsAdmin() == 1) {
+        echo '<a href="AdministrationUsers.php">Admin</a>';
+    }
+
+
+    }
+    ?>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
 

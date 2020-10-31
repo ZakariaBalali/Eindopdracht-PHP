@@ -1,5 +1,6 @@
 <?php
 require '../Logic/LoginLogic.php';
+require '../Logic/UserLogic.php'
 ?>
 
 
@@ -17,7 +18,16 @@ require '../Logic/LoginLogic.php';
 <section class="topnav">
     <img src="images/logo.png"  alt="Airplane" title="AirplaneLogo" class="logoImage">
     <a href="Homepage.php">Home</a>
-    <a href="AdministrationUsers.php">Admin</a>
+    <?php
+    if(isset($_SESSION['LoggedIn'])){
+        $user = $userLogic->SearchUserByEmail($_SESSION['email']);
+        if ($user[0]->getIsAdmin() == 1) {
+            echo '<a href="AdministrationUsers.php">Admin</a>';
+        }
+
+
+    }
+    ?>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
 

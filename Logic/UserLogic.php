@@ -20,6 +20,10 @@ class UserLogic {
         return$this->userDAL->DeleteUser($id);
 
     }
+
+    function MakeAdmin($id){
+        return $this->userDAL->MakeAdmin($id);
+    }
     function GetUserByEmail($email){
         return $this->userDAL->GetUserByEmail($email);
     }

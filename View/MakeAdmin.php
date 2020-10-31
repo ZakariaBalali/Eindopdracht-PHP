@@ -13,11 +13,11 @@ if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
 else {
     $id = $_GET['UserID'];
 
-    if ($userLogic->DeleteUser($id)) {
+    if ($userLogic->MakeAdmin($id)) {
         header('Location: ../View/AdministrationUsers.php');
         echo 'User succesfully deleted';
     } else {
-        echo "<script>alert('There was en error while removing the user')</script>";
+        echo "<script>alert('There was en error while granting admin status to user')</script>";
     }
 }
 ?>
