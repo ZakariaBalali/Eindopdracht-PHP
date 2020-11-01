@@ -25,7 +25,7 @@ if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
     <img src="images/logo.png" alt="Airplane" title="AirplaneLogo" class="logoImage">
     <a href="Homepage.php">Home</a>
     <a class="active" href="AdministrationUsers.php">Admin</a>
-    <a href="#about">About</a>
+    <a href="TicketPage.php">Tickets</a>
     <a href="#contact">Contact</a>
 
     <section class="topnavRight">
@@ -56,11 +56,11 @@ if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
             <input type="email" placeholder="example@example.com" name="searchEmail">
             <button type="submit" name="searchEmailBtn" form="searchEmailForm" value="Submit">Search by email</button>
         </form>
-            <form id="searchNameForm" method="post">
-                <label>Search by name (both first name and last name)</label>
-                <input type="text" placeholder="e.g. John" name="searchName">
-                <button type="submit" name="searchNameBtn" form="searchNameForm" value="Submit">Search by name</button>
-            </form>
+        <form id="searchNameForm" method="post">
+            <label>Search by name (both first name and last name)</label>
+            <input type="text" placeholder="e.g. John" name="searchName">
+            <button type="submit" name="searchNameBtn" form="searchNameForm" value="Submit">Search by name</button>
+        </form>
     </section>
 
 </section>

@@ -16,10 +16,10 @@ require_once '../Logic/UserLogic.php'
 ?>
 
 <section class="topnav">
-    <img src="images/logo.png"  alt="Airplane" title="AirplaneLogo" class="logoImage">
+    <img src="images/logo.png" alt="Airplane" title="AirplaneLogo" class="logoImage">
     <a href="Homepage.php">Home</a>
     <?php
-    if(isset($_SESSION['LoggedIn'])){
+    if (isset($_SESSION['LoggedIn'])) {
         $user = $userLogic->SearchUserByEmail($_SESSION['email']);
         if ($user[0]->getIsAdmin() == 1) {
             echo '<a href="AdministrationUsers.php">Admin</a>';
@@ -28,7 +28,7 @@ require_once '../Logic/UserLogic.php'
 
     }
     ?>
-    <a href="#about">About</a>
+    <a href="TicketPage.php">Tickets</a>
     <a href="#contact">Contact</a>
 
     <section class="topnavRight">
@@ -45,11 +45,10 @@ require_once '../Logic/UserLogic.php'
 </section>
 
 
-<section class="MainRegister" id= "mainregister">
-  <label>Registration successfull!</label>
-    <a href="Login.php" ><label>Click here to go to login page</label></a>
-    </section>
-
+<section class="MainRegister" id="mainregister">
+    <label>Registration successfull!</label>
+    <a href="Login.php"><label>Click here to go to login page</label></a>
+</section>
 
 
 </body>

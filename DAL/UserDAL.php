@@ -21,9 +21,9 @@ class UserDAL
     }
 
     //Gets user info from db and puts values into array
-    function GetAllUsersDB()
+    function GetAllUsers()
     {
-        $sql = "SELECT userID, firstName, lastName, email, password, isAdmin FROM users";
+        $sql = "SELECT * FROM users";
 
         $users = [];
         $result = mysqli_query($this->connection, $sql);
@@ -35,6 +35,7 @@ class UserDAL
                 $email = $row["email"];
                 $password = $row['password'];
                 $isAdmin = $row['isAdmin'];
+
                 $user = new User($id, $firstName, $lastName, $email, $password, $isAdmin);
                 $users[] = $user;
             }

@@ -28,7 +28,7 @@ require '../Logic/UserLogic.php'
 
     }
     ?>
-    <a href="#about">About</a>
+    <a href="TicketPage.php">Tickets</a>
     <a href="#contact">Contact</a>
 
     <section class="topnavRight">

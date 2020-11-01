@@ -1,42 +1,53 @@
 <?php
-require_once dirname(__FILE__).'/../DAL/UserDAL.php';
+require_once dirname(__FILE__) . '/../DAL/UserDAL.php';
 
-class UserLogic {
+class UserLogic
+{
     private $userDAL;
 
-    function __construct(){
+    function __construct()
+    {
         $this->userDAL = new UserDAL();
     }
 
-    function CloseConnection(){
+    function CloseConnection()
+    {
         $this->userDAL->dbCloseConnection();
     }
 
-    function GetAllUsers(){
-        return $this->userDAL->GetAllUsersDB();
+    function GetAllUsers()
+    {
+        return $this->userDAL->GetAllUsers();
     }
 
-    function DeleteUser($id){
-        return$this->userDAL->DeleteUser($id);
+    function DeleteUser($id)
+    {
+        return $this->userDAL->DeleteUser($id);
 
     }
 
-    function MakeAdmin($id){
+    function MakeAdmin($id)
+    {
         return $this->userDAL->MakeAdmin($id);
     }
-    function GetUserByEmail($email){
+
+    function GetUserByEmail($email)
+    {
         return $this->userDAL->GetUserByEmail($email);
     }
 
-    function SearchUserByName($name){
+    function SearchUserByName($name)
+    {
         return $this->userDAL->SearchUserByName($name);
     }
 
-    function SearchUserByEmail($email){
+    function SearchUserByEmail($email)
+    {
         return $this->userDAL->SearchUserByEmail($email);
     }
 
-    function UserPasswordReset($email){
+    function UserPasswordReset($email)
+    {
         return $this->userDAL->UserPasswordReset($email);
     }
 

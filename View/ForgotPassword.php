@@ -37,7 +37,7 @@ if (isset($_POST['passwordReset']))
     <img src="images/logo.png"  alt="Airplane" title="AirplaneLogo" class="logoImage">
     <a href="Homepage.php">Home</a>
     <a href="AdministrationUsers.php">Admin</a>
-    <a href="#about">About</a>
+    <a href="TicketPage.php">Tickets</a>
     <a href="#contact">Contact</a>
 
     <section class="topnavRight">
