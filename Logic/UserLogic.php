@@ -9,12 +9,7 @@ class UserLogic
     {
         $this->userDAL = new UserDAL();
     }
-
-    function CloseConnection()
-    {
-        $this->userDAL->dbCloseConnection();
-    }
-
+//Gets functions from DAL layer
     function GetAllUsers()
     {
         return $this->userDAL->GetAllUsers();

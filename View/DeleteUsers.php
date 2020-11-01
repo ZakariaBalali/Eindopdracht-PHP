@@ -12,7 +12,7 @@ if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
 }
 else {
     $id = $_GET['UserID'];
-
+//if user is deleted, refresh page
     if ($userLogic->DeleteUser($id)) {
         header('Location: ../View/AdministrationUsers.php');
         echo 'User succesfully deleted';

@@ -4,7 +4,7 @@ define ('DB_USER', 'root');
 define ('DB_PASSWORD', '');
 define ('DB_DB', 's636655_airport');
 
-class Database {
+class DbConnection {
     private $connection;
     private static $instance; //The single instance
 
@@ -14,7 +14,7 @@ class Database {
     */
     public static function getInstance() {
         if(!self::$instance) {
-            self::$instance = new Database();
+            self::$instance = new DbConnection();
         }
         return self::$instance;
     }
@@ -32,10 +32,6 @@ class Database {
     public function getConnection() {
         return $this->connection;
     }
-    // Close mysqli connection
-    public function closeConnection(){
-        mysqli_close($this->connection);
 
-    }
 }
 ?>

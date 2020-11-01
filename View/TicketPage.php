@@ -74,7 +74,7 @@ require_once '../DAL/TicketDAL.php';
             echo '<td>' . $ticket->getFlightTo() . '</td>';
             echo '<td>' . $ticket->getTimeDeparture() . '</td>';
             echo '<td>' . $ticket->getTimeArrival() . '</td>';
-            echo '<td>€' . $ticket->getPrice() . '</td>';
+            echo '<td>€   ' . $ticket->getPrice() . '</td>';
             echo '<td><a href"#buytickets"><button type="submit" name="buy" form="buyTickets" value="Submit">Add ticket to shopping cart</button></a>';
             echo '</tr>';
         }

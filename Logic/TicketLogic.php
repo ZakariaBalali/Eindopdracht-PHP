@@ -10,11 +10,7 @@ class TicketLogic
         $this->ticketDAL = new TicketDAL();
     }
 
-    function CloseConnection()
-    {
-        $this->ticketDAL->dbCloseConnection();
-    }
-
+    //gets getAllTickets function from the DAL layer
     function GetAllTickets()
     {
         return $this->ticketDAL->GetAllTickets();

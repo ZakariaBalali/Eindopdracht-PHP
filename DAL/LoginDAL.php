@@ -8,7 +8,7 @@ class LoginDAL
     private $userDAL;
     public function __construct()
     {
-        $this->instance = Database::getInstance();
+        $this->instance = DbConnection::getInstance();
         $this->connection = $this->instance->getConnection();
         $this->userDAL = new UserDAL();
     }

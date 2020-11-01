@@ -10,15 +10,10 @@ class TicketDAL
     //makes the connection to the database
     function __construct()
     {
-        $this->instance = Database::getInstance();
+        $this->instance = DbConnection::getInstance();
         $this->connection = $this->instance->getConnection();
     }
 
-    //Closes the connection to the database
-    function dbCloseConnection()
-    {
-        $this->Database->closeConnection();
-    }
 
     //Gets ticket info from db and puts values into array
     function GetAllTickets()

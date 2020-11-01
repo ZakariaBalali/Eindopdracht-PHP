@@ -10,14 +10,8 @@ class UserDAL
     //makes the connection to the database
     function __construct()
     {
-        $this->instance = Database::getInstance();
+        $this->instance = DbConnection::getInstance();
         $this->connection = $this->instance->getConnection();
-    }
-
-    //Closes the connection to the database
-    function dbCloseConnection()
-    {
-        $this->Database->closeConnection();
     }
 
     //Gets user info from db and puts values into array
@@ -44,6 +38,7 @@ class UserDAL
             echo 'no users found';
         }
     }
+
     //Deletes user from database with a prepared statement
     function DeleteUser($id)
     {
@@ -58,7 +53,8 @@ class UserDAL
     }
 
     //Grants admin status to user
-    function MakeAdmin($id){
+    function MakeAdmin($id)
+    {
         $stmt = $this->connection->prepare("UPDATE users SET isAdmin = '1' where userID = '$id'");
         $stmt->bind_param("i", $id);
         try {
@@ -68,6 +64,7 @@ class UserDAL
             return false;
         }
     }
+
     //Gets user from database with a prepared statement for the login process
     public function GetUserByEmail($email)
     {
@@ -81,6 +78,7 @@ class UserDAL
             return null;
         }
     }
+
     //Gets users with a certain firstname or lastname from the database using escape string to prevent sql injection
     public function SearchUserByName($name)
     {
@@ -101,10 +99,9 @@ class UserDAL
                 $users[] = $user;
             }
             return $users;
-        } else {
-            echo 'no users found';
         }
     }
+
     //Gets users with a certain email from the database using escape string to prevent sql injection
     public function SearchUserByEmail($email)
     {
@@ -125,10 +122,9 @@ class UserDAL
                 $users[] = $user;
             }
             return $users;
-        } else {
-            echo 'no users found';
         }
     }
+
     //Resets password from a certain email address, uses escape string to prevent sql injection and a randomizer to get a random new password
     public function UserPasswordReset($email)
     {
@@ -138,6 +134,7 @@ class UserDAL
         $this->sendNewPasswordToEmail($newPassword, $email);
         return mysqli_query($this->connection, $sql);
     }
+
     //generates random string for the new password
     function generateRandomString($length = 10)
     {
@@ -149,6 +146,7 @@ class UserDAL
         }
         return $randomString;
     }
+
     //Sends new password to email address
     function sendNewPasswordToEmail($newPassword, $email)
     {
