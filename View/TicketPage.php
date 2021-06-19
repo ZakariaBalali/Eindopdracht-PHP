@@ -8,13 +8,13 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
 <?php
 require_once '../Logic/LoginLogic.php';
 require_once '../Logic/UserLogic.php';
 require_once '../Logic/TicketLogic.php';
 require_once '../DAL/TicketDAL.php';
 ?>
+
 
 <section class="topnav">
     <img src="images/logo.png" alt="Airplane" title="AirplaneLogo" class="logoImage">
@@ -43,43 +43,40 @@ require_once '../DAL/TicketDAL.php';
         }
 
         ?>
+        <a href="Shoppingcart.php">Shopping Cart</a>
     </section>
 </section>
-<section class="Main" id="maincontent">
-    <table class="Users">
+<section>
 
-        <tr>
-            <th></th>
-            <th>Airline</th>
-            <th>Flight From</th>
-            <th>Flight To</th>
-            <th>Time Departure</th>
-            <th>Time Arrival</th>
-            <th>Price</th>
-            <th></th>
-        </tr>
+    <?php
+    //fills table with tickets
+    $tickets = [];
+    $ticketLogic = new TicketLogic();
 
-
+    $tickets = (array)$ticketLogic->GetAllTickets();
+    foreach ($tickets as $ticket) {
+        ?>  <form action="../Logic/ShoppingCartLogic.php" method="post"
+                  id="AddToCart<?php echo $ticket->getTicketID()?>">
+        <input style="display: none" class="valueArtist" name="ticketID" type="text"
+               value="<?php echo $ticket->getTicketID(); ?>"/>
         <?php
-        //fills table with tickets
-        $tickets = [];
-        $ticketLogic = new TicketLogic();
-
-        $tickets= (array)$ticketLogic->GetAllTickets();
-        foreach ($tickets as $ticket) {
-            echo '<tr>';
-            echo '<td><img src = "images/' . $ticket->getImage() . '.png" alt="AirlineImage" title="AirlineLogo" class = "airlineLogo"></td>';
-            echo '<td>' . $ticket->getAirline() . '</td>';
-            echo '<td>' . $ticket->getFlightFrom() . '</td>';
-            echo '<td>' . $ticket->getFlightTo() . '</td>';
-            echo '<td>' . $ticket->getTimeDeparture() . '</td>';
-            echo '<td>' . $ticket->getTimeArrival() . '</td>';
-            echo '<td>€   ' . $ticket->getPrice() . '</td>';
-            echo '<td><a href"#buytickets"><button type="submit" name="buy" form="buyTickets" value="Submit">Add ticket to shopping cart</button></a>';
-            echo '</tr>';
-        }
-        ?>
-    </table>
+        echo '<section className="wholeTicket">';
+        echo '<section class="ticketDiv">';
+        echo '<img src = "images/' . $ticket->getImage() . '.png" alt="AirlineImage" title="AirlineLogo" class = "airlineLogo"></td>';
+        echo '<h1>' . $ticket->getAirline() . '</h1>';
+        echo '<section>' . $ticket->getFlightFrom() . '</section>';
+        echo '<div>' .$ticket->getFlightTo(). '</section>';
+        echo '<div>' .$ticket->getTimeDeparture(). '</section>';
+        echo '<div>' .$ticket->getTimeArrival(). '</section>';
+        echo '<div>' .$ticket->getPrice(). '</section>';
+       ?> <button form="AddToCart<?php echo $ticket->getTicketID()?>" type="submit"
+                            name="AddToShoppingCart" value="submit"
+                            class="AddToCartButton"
+                            id="AddToCartButton<?php echo $ticket->getTicketID()?>">Add ticket to shopping cart</button><?php
+        echo '</div>';
+        echo '</div>';
+    }
+    ?>
 </section>
 
 

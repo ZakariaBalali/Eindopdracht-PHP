@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="515e533c-a437-4b26-86d1-4d7b4044279f" name="Default Changelist" comment="" />
+    <list default="true" id="515e533c-a437-4b26-86d1-4d7b4044279f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Logic/ShoppingCartLogic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/Shoppingcart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL/TicketDAL.php" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/TicketDAL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/TicketPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/TicketPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/css/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1isPFc7JPg5AeUVoUZQXlMkzOWT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/HaarlemFestival_groep5-Steff-Branch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -36,24 +59,16 @@
       <workItem from="1602693226859" duration="136000" />
       <workItem from="1602760186320" duration="656000" />
       <workItem from="1603100754971" duration="1229000" />
+      <workItem from="1620725611517" duration="1198000" />
+      <workItem from="1623763098980" duration="1887000" />
+      <workItem from="1623916594704" duration="3215000" />
+      <workItem from="1624123054337" duration="1507000" />
+      <workItem from="1624124605226" duration="25000" />
+      <workItem from="1624124645930" duration="2091000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602761215422">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602761215422" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1603101659356">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603101659356" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1602760242298">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602760242298" />
+    <option name="version" value="3" />
   </component>
 </project>

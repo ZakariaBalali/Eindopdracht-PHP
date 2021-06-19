@@ -42,5 +42,33 @@ class TicketDAL
             echo 'no tickets found';
         }
     }
+
+    function GetTicketByID($ticketID)
+    {
+        //prepared statement
+
+        $stmt = $this->connection->prepare("SELECT ticketID, airline, flightFrom, flightTo, timeDeparture, timeArrival, price, image FROM `tickets` WHERE ticketID = ?");
+        $stmt->bind_param("i", $ticketID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        while ($row = $result->fetch_assoc()) {
+
+            $ticketID = $row["ticketID"];
+            $airline = $row['airline'];
+            $flightFrom = $row['flightFrom'];
+            $flightTo = $row["flightTo"];
+            $timeDeparture = $row['timeDeparture'];
+            $timeArrival = $row['timeArrival'];
+            $price = $row['price'];
+            $image = $row['image'];
+
+            $ticket = new Ticket($ticketID, $airline, $flightFrom, $flightTo, $timeDeparture, $timeArrival, $price, $image);
+            $tickets[] = $ticket;
+        }
+        return $tickets;
+    }
+}
+
+?>
 }
 ?>

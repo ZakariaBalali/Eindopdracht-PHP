@@ -6,6 +6,13 @@ body {
     margin: 0px 0px 0px 0px;
 }
 
+.ticketDiv {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
 /* Style the navbar */
 .topnav {
     overflow: hidden;
@@ -69,6 +76,11 @@ body {
     width: 2%;
     height: 2%;
     object-fit: contain;
+}
+
+.airlineLogo {
+    width: 20px;
+    height: 20px !important;
 }
 
 /* Style the input container */
@@ -153,7 +165,7 @@ body {
     background: #ccc;
 }
 
-.search-container label,  .search-container input, .search-container button {
+.search-container label, .search-container input, .search-container button {
     display: flex;
     margin-left: 30px;
     margin-top: 20px;
@@ -217,11 +229,10 @@ body {
     margin-bottom: 20px;
 }
 
-.MainImg img{
+.MainImg img {
     width: 240%;
     height: 120%;
 }
-
 
 
 .Secondary {
@@ -266,18 +277,13 @@ body {
 
 }
 
-.Main img{
 
-    width: 80%;
-    height: 5%;
+.Main button {
+
+    width: 100px;
 }
 
-.Main button{
-
-    width:100px;
-}
-
-.Main button:hover{
+.Main button:hover {
     background-color: #ddd;
 }
 
@@ -307,3 +313,7 @@ body {
     color: white;
 }
 
+.wholeTicket {
+    display: flex;
+    flex-direction: row;
+}
