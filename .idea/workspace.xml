@@ -2,12 +2,327 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="515e533c-a437-4b26-86d1-4d7b4044279f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Logic/ShoppingCartLogic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/Shoppingcart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/captures/get-capture.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/captures/list-captures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/customers/create-customer-first-payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/customers/create-customer-payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/customers/create-customer-recurring-payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/customers/create-customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/customers/delete-customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/customers/list-customer-payments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/customers/update-customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/initialize.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/initialize_with_oauth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/invoices/list-invoices.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/mandates/create-mandate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/mandates/list-mandates.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/mandates/revoke-mandate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/orders/cancel-order-lines.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/orders/cancel-order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/orders/create-order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/orders/list-methods.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/orders/list-orders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/orders/refund-order-completely.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/orders/refund-order-partially.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/orders/webhook.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/payments/create-ideal-payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/payments/create-payment-oauth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/payments/create-payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/payments/list-methods.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/payments/list-payments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/payments/refund-payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/payments/return.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/payments/webhook.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/profiles/create-profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/profiles/delete-profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/profiles/list-profiles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/profiles/update-profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/settlements/list-settlements.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/shipments/create-shipment-all.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/shipments/create-shipment-partial.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/shipments/get-shipment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/shipments/list-shipments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/shipments/update-shipment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/subscriptions/cancel-subscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/subscriptions/create-subscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/examples/subscriptions/update-subscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/CompatibilityChecker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/ChargebackEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/CollectionEndpointAbstract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/CustomerEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/CustomerPaymentsEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/EndpointAbstract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/InvoiceEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/MandateEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/MethodEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/OnboardingEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/OrderEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/OrderLineEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/OrderPaymentEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/OrderRefundEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/OrganizationEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/PaymentCaptureEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/PaymentChargebackEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/PaymentEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/PaymentRefundEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/PermissionEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/ProfileEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/ProfileMethodEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/RefundEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/SettlementPaymentEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/SettlementsEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/ShipmentEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/SubscriptionEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Endpoints/WalletEndpoint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Exceptions/ApiException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Exceptions/IncompatiblePlatform.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Guzzle/RetryMiddlewareFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/MollieApiClient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/BaseCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/BaseResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Capture.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/CaptureCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Chargeback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/ChargebackCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/CurrentProfile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/CursorCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/CustomerCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Invoice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/InvoiceCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Issuer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/IssuerCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Mandate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/MandateCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Method.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/MethodCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/MethodPrice.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/MethodPriceCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Onboarding.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/OrderCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/OrderLine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/OrderLineCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Organization.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/OrganizationCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Payment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/PaymentCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Permission.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/PermissionCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/ProfileCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Refund.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/RefundCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/ResourceFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Settlement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/SettlementCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Shipment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/ShipmentCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/Subscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Resources/SubscriptionCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/InvoiceStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/MandateMethod.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/MandateStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/OnboardingStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/OrderLineStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/OrderLineType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/OrderStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/PaymentMethod.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/PaymentMethodStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/PaymentStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/ProfileStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/RefundStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/SequenceType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/SettlementStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/src/Types/SubscriptionStatus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer-autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/autoload_files.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/autoload_real.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/autoload_static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/ca-bundle/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/ca-bundle/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/ca-bundle/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/ca-bundle/res/cacert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/ca-bundle/src/CaBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/installed.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/installed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/composer/platform_check.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/UPGRADING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/ClientInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/ClientTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Cookie/CookieJar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Cookie/CookieJarInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Cookie/FileCookieJar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Cookie/SessionCookieJar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Cookie/SetCookie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/BadResponseException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/ClientException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/ConnectException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/GuzzleException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/SeekException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/ServerException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/TooManyRedirectsException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Exception/TransferException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Handler/CurlFactoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Handler/StreamHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/HandlerStack.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/MessageFormatter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Middleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Pool.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/RequestOptions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/RetryMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/TransferStats.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/UriTemplate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/Utils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/guzzle/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/phpstan-baseline.neon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/phpstan.neon.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/psalm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/AggregateException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/CancellationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/Coroutine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/Create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/Each.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/EachPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/FulfilledPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/Is.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/Promise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/PromiseInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/PromisorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/RejectedPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/RejectionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/TaskQueue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/TaskQueueInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/Utils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/promises/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/AppendStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/BufferStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/CachingStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/DroppingStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/FnStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/InflateStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/LazyOpenStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/LimitStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/MessageTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/MimeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/MultipartStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/NoSeekStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/PumpStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Query.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Rfc7230.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/ServerRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Stream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/StreamDecoratorTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/StreamWrapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/UploadedFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Uri.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/UriNormalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/UriResolver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/Utils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/guzzlehttp/psr7/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-client/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-client/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-client/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-client/src/ClientExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-client/src/ClientInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-client/src/NetworkExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-client/src/RequestExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/src/MessageInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/src/RequestInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/src/ResponseInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/src/ServerRequestInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/src/StreamInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/src/UploadedFileInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/psr/http-message/src/UriInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/ralouphie/getallheaders/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/ralouphie/getallheaders/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/ralouphie/getallheaders/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/ralouphie/getallheaders/src/getallheaders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/scoper-autoload.php.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Idn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/DisallowedRanges.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/Regex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/deviation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/disallowed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/disallowed_STD3_mapped.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/disallowed_STD3_valid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/ignored.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/mapped.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/Resources/unidata/virama.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-idn/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/Normalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/Resources/unidata/canonicalComposition.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/Resources/unidata/canonicalDecomposition.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/Resources/unidata/combiningClass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/Resources/unidata/compatibilityDecomposition.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-intl-normalizer/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-php72/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-php72/Php72.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-php72/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-php72/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logic/mollie/vendor/symfony/polyfill-php72/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/View/MakePdf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DAL/TicketDAL.php" beforeDir="false" afterPath="$PROJECT_DIR$/DAL/TicketDAL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/ShoppingCartPayment.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/ShoppingCartPayment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/Shoppingcart.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Shoppingcart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/View/TicketPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/TicketPage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +352,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Logic" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\XAMPP\htdocs\Frontend\Eindopdracht\Logic" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\XAMPP\htdocs\Frontend\Eindopdracht" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -64,11 +387,22 @@
       <workItem from="1623916594704" duration="3215000" />
       <workItem from="1624123054337" duration="1507000" />
       <workItem from="1624124605226" duration="25000" />
-      <workItem from="1624124645930" duration="2091000" />
+      <workItem from="1624124645930" duration="5396000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

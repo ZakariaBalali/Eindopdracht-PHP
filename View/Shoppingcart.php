@@ -54,6 +54,7 @@ require_once '../DAL/TicketDAL.php';
     <?php
     if (!empty($_SESSION['Products'])) { ?>
 
+    <form class="formPayment" action="../Logic/ShoppingCartPayment.php" method="post" id="GoToPayment">
         <table id="CartTable">
             <tr id="TableHead">
                 <th></th>
@@ -68,9 +69,11 @@ require_once '../DAL/TicketDAL.php';
             foreach ($_SESSION['Products'] as $item) {
                 //Make a form for each item to delete them if needed
                 ?>
-                <form class="formAlter" action="AlterSession.php" method="post" id="AlterProduct">
-                    <input style="display: none" class="valueEvent" name="eventID" type="text"
+                    <input style="display: none" class="valueEvent" id="ticketID" name="ticketID" type="text"
                            value="<?php echo $item['ticketID'] ?>"/><?php
+                    ?>
+                    <input style="display: none" class="valueEvent" id="Price" name="Price" type="text"
+                           value="<?php echo $item['Price'] ?>"/><?php
                     ?>
                     <tr><?php
                         echo '<td><img src = "images/' . $item['image'] . '.png" alt="AirlineImage" title="AirlineLogo" class = "airlineLogo"></td>'; ?>
@@ -83,15 +86,13 @@ require_once '../DAL/TicketDAL.php';
 
                         <td id="TabledataCart">&euro; <?php echo $item ['Price']; ?></td>
                     </tr>
-                </form>
             <?php }
             ?>
         </table>
 
-        <form class="formPayment" action="ShoppingCartPayment.php" method="post" id="GoToPayment">
 
-            <button id="ProceedButton" form="GoToPayment" id="GoToPayment">
-                Proceed to Details
+            <button id="ConfirmButton" name="ConfirmButton" form="GoToPayment" id="GoToPayment">
+                Confirm order
             </button>
         </form>
     <?php } else {

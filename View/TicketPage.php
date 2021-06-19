@@ -16,6 +16,7 @@ require_once '../DAL/TicketDAL.php';
 ?>
 
 
+
 <section class="topnav">
     <img src="images/logo.png" alt="Airplane" title="AirplaneLogo" class="logoImage">
     <a href="Homepage.php">Home</a>
@@ -55,8 +56,8 @@ require_once '../DAL/TicketDAL.php';
 
     $tickets = (array)$ticketLogic->GetAllTickets();
     foreach ($tickets as $ticket) {
-        ?>  <form action="../Logic/ShoppingCartLogic.php" method="post"
-                  id="AddToCart<?php echo $ticket->getTicketID()?>">
+    ?>  <form action="../Logic/ShoppingCartLogic.php" method="post"
+              id="AddToCart<?php echo $ticket->getTicketID()?>">
         <input style="display: none" class="valueArtist" name="ticketID" type="text"
                value="<?php echo $ticket->getTicketID(); ?>"/>
         <?php
@@ -69,14 +70,14 @@ require_once '../DAL/TicketDAL.php';
         echo '<div>' .$ticket->getTimeDeparture(). '</section>';
         echo '<div>' .$ticket->getTimeArrival(). '</section>';
         echo '<div>' .$ticket->getPrice(). '</section>';
-       ?> <button form="AddToCart<?php echo $ticket->getTicketID()?>" type="submit"
-                            name="AddToShoppingCart" value="submit"
-                            class="AddToCartButton"
-                            id="AddToCartButton<?php echo $ticket->getTicketID()?>">Add ticket to shopping cart</button><?php
+        ?> <button form="AddToCart<?php echo $ticket->getTicketID()?>" type="submit"
+                   name="AddToShoppingCart" value="submit"
+                   class="AddToCartButton"
+                   id="AddToCartButton<?php echo $ticket->getTicketID()?>">Add ticket to shopping cart</button><?php
         echo '</div>';
         echo '</div>';
-    }
-    ?>
+        }
+        ?>
 </section>
 
 
