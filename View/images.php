@@ -47,24 +47,29 @@ require_once '../Logic/UserLogic.php';
 </section>
 
 
+<h1>Files</h1>
+<?php
+$dir = 'uploads/';
+// Sort in ascending order - this is default
+$files = scandir($dir, 1);
 
-    <h1>Files</h1>
-    <?php
-    $dir = 'uploads/';
-    // Sort in ascending order - this is default
-    $files = scandir($dir, 1);
-
-    ?>
-<br><h1>UPLOAD FILES</h1> <br>
+?>
+<br>
+<h1>UPLOAD FILES</h1> <br>
 <form action="Upload.php" method="post" enctype="multipart/form-data"> Select image to upload:<input
             type="file" name="fileToUpload" id="fileToUpload"><input type="submit" value="Upload
 Image" name="submit"></form>
 
 <h1>Uploaded images</h1> <br>
 <?php
-foreach ($files as $file) { ?>
-    <img src="<?php echo $dir; echo $file; ?>"</img><?php
-}?>
+foreach ($files as $file) {
+    if (getimagesize($dir . $file) !== false) {
+        ?>
+
+        <img class="uploadedImage" src="<?php echo $dir;
+        echo $file; ?>"</img><?php
+    }
+} ?>
 
 
 </body>

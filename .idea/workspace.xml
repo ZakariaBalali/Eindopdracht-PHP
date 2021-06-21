@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="515e533c-a437-4b26-86d1-4d7b4044279f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Model/mypdf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/PaymentSuccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/images.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/upload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic/ShoppingCartPayment.php" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/ShoppingCartPayment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/AdministrationUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/AdministrationUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/ForgotPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/ForgotPassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/MakePdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/MakePdf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/PasswordResetSuccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/PasswordResetSuccess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Register.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/RegistrationSuccess.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/RegistrationSuccess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/Shoppingcart.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/Shoppingcart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/TicketPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/TicketPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/View/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/images.php" beforeDir="false" afterPath="$PROJECT_DIR$/View/images.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +72,7 @@
       <workItem from="1624124605226" duration="25000" />
       <workItem from="1624124645930" duration="5701000" />
       <workItem from="1624130844158" duration="933000" />
-      <workItem from="1624264861864" duration="3718000" />
+      <workItem from="1624264861864" duration="5903000" />
     </task>
     <servers />
   </component>

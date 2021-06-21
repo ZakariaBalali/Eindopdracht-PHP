@@ -317,3 +317,7 @@ body {
     display: flex;
     flex-direction: row;
 }
+
+.uploadedImage {
+    width: 100px;
+}
