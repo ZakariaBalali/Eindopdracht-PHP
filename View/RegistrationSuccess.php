@@ -29,7 +29,7 @@ require_once '../Logic/UserLogic.php'
     }
     ?>
     <a href="TicketPage.php">Tickets</a>
-    <a href="#contact">Contact</a>
+    <a href="images.php">Upload images</a>
 
     <section class="topnavRight">
         <a class="active" href="Register.php">Register</a>
@@ -41,6 +41,7 @@ require_once '../Logic/UserLogic.php'
         }
 
         ?>
+        <a href="Shoppingcart.php">Shopping Cart</a>
     </section>
 </section>
 

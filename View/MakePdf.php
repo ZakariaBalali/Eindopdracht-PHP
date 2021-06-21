@@ -3,9 +3,9 @@ require_once '../Model/mypdf.php';
 require_once '../lib/fpdf.php';
 require_once '../lib/phpqrcode/qrlib.php';
 
+
 session_start();
 
-$ticketID = $_SESSION["ticketID"];
 
 $pdf = new FPDF();
 $pdf->AliasNbPages();
@@ -23,27 +23,30 @@ $pdf->Cell(0, 10, 'This invoice contains the order number and barcode that gives
 $pdf->Ln();
 
 
+foreach ($_SESSION['Products'] as $item) {
+    $pdf->Cell(0,10,'Date of purchase: ' . date("d/m/y"),0,1,'L');
+    $pdf->Cell(0, 10, 'Order Number: ' .$item['ticketID'],0,1,'L');
+    $pdf->Cell(0, 10, 'Price: ' .$item['Price'],0,1,'L');
+    $pdf->Cell(0, 10, 'Airline: ' .$item['airline'],0,1,'L');
+    $pdf->Cell(0, 10, 'From: ' .$item['flightFrom'],0,1,'L');
+    $pdf->Cell(0, 10, 'To: ' .$item['flightTo'],0,1,'L');
 
-        $pdf->Cell(0, 10, 'Airline '.$ .' Detail',0,1,'C');
 
-        $pdf->Cell(0, 10, 'Event Name: ' .$orderItem->getEventID(),0,1,'L');
-        $pdf->Cell(0, 10, 'Amount: ' .$orderItem->getAmount(),0,1,'L');
-        $pdf->Cell(0, 10, 'Start Time: ' .date('l d F G i', strtotime($orderItem->getStartTime())),0,1,'L');
 
-        $pdf->Ln(3);
-        $i++;
-    }
+
+
+
 
 
 // how to save PNG codes to server
 
     $tempDir = '../lib/qrcodes/';
 
-    $codeContents = ' this is your QR code for the Festival';
+    $codeContents = ' this is your QR code for the flight';
 
 // we need to generate filename somehow,
 // with md5 or with database ID used to obtains $codeContents...
-    $fileName = '005_file_'.md5($customer->getOrderID()).'.png';
+    $fileName = '005_file_'.md5($item['ticketID']).'.png';
 
     $pngAbsoluteFilePath = $tempDir.$fileName;
     $urlRelativeFilePath = $tempDir.$fileName;
@@ -56,64 +59,27 @@ $pdf->Ln();
 
 // displaying
     $pdf->Image($urlRelativeFilePath, null, null, 50, 50);
-    $pdf->Cell(0,10,($customer->getFirstName() . ' ' .$customer->getLastName() . $codeContents),0,1,'L');
-    $OutputPdf='Invoice/' . $customer->getLastName() . $customer->getCustomerID() . '.pdf';
+    $pdf->Cell(0,10,($item['flightFrom'] . ' ' .$item['flightTo'] . $codeContents),0,1,'L');
 }
 
 
 
-$pdf->output($OutputPdf,"F");
+$pdf->output();
 
 
-// Settings
-foreach ($Customers as $customer) {
-    $name = $customer->getFirstName();
-    $email = $customer->getEmail();
-    $to = "$name <$email>";
-    $from = "Haarlem Festival ";
-    $subject = "Here are your tickets!";
-    $mainMessage = "Hello, Thank you for ordering at Haarlem Festival. Here are your tickets!";
-    $fileatt = $OutputPdf; //file location
-    $fileatttype = "application/pdf";
-    $fileattname = 'Ticket' . $customer->getLastName() . $customer->getCustomerID() . '.pdf'; //name that you want to use to send or you can use the same name
-    $headers = "From: $from";
 
-// File
-    $file = fopen($fileatt, 'rb');
-    $data = fread($file, filesize($fileatt));
-    fclose($file);
 
-// This attaches the file
-    $semi_rand = md5(time());
-    $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-    $headers .= "\nMIME-Version: 1.0\n" .
-        "Content-Type: multipart/mixed;\n" .
-        " boundary=\"{$mime_boundary}\"";
-    $message = "This is a multi-part message in MIME format.\n\n" .
-        "--{$mime_boundary}\n" .
-        "Content-Type: text/plain; charset=\"iso-8859-1\n" .
-        "Content-Transfer-Encoding: 7bit\n\n" .
-        $mainMessage . "\n\n";
 
-    $data = chunk_split(base64_encode($data));
-    $message .= "--{$mime_boundary}\n" .
-        "Content-Type: {$fileatttype};\n" .
-        " name=\"{$fileattname}\"\n" .
-        "Content-Disposition: attachment;\n" .
-        " filename=\"{$fileattname}\"\n" .
-        "Content-Transfer-Encoding: base64\n\n" .
-        $data . "\n\n" .
-        "--{$mime_boundary}--\n";
 
-// Send the email
-    if (mail($to, $subject, $message, $headers)) {
+// Unset all of the session variables.
+$_SESSION = array();
+// Finally, destroy the session.
+session_destroy();
 
-        header('Location: ../View/PaymentSucceeded.php');
 
-    } else {
 
-        echo "There was an error sending the mail.";
-    }
 
-}
+
+
+
 ?>

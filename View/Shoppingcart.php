@@ -33,7 +33,7 @@ require_once '../DAL/TicketDAL.php';
     }
     ?>
     <a href="TicketPage.php">Tickets</a>
-    <a href="#contact">Contact</a>
+    <a href="images.php">Upload images</a>
 
     <section class="topnavRight">
 

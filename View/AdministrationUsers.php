@@ -26,7 +26,7 @@ if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
     <a href="Homepage.php">Home</a>
     <a class="active" href="AdministrationUsers.php">Admin</a>
     <a href="TicketPage.php">Tickets</a>
-    <a href="#contact">Contact</a>
+    <a href="images.php">Upload images</a>
 
     <section class="topnavRight">
 
@@ -40,6 +40,7 @@ if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
         }
 
         ?>
+        <a href="Shoppingcart.php">Shopping Cart</a>
     </section>
 </section>
 

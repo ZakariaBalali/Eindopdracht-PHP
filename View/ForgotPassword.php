@@ -38,7 +38,7 @@ if (isset($_POST['passwordReset']))
     <a href="Homepage.php">Home</a>
     <a href="AdministrationUsers.php">Admin</a>
     <a href="TicketPage.php">Tickets</a>
-    <a href="#contact">Contact</a>
+    <a href="images.php">Upload images</a>
 
     <section class="topnavRight">
 
@@ -52,6 +52,7 @@ if (isset($_POST['passwordReset']))
         }
 
         ?>
+        <a href="Shoppingcart.php">Shopping Cart</a>
     </section>
 </section>
 

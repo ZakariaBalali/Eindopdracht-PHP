@@ -1,8 +1,11 @@
+<?php
+session_start()
+?>
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Tickets</title>
     <meta name="description" content="Flight Tickets">
     <meta name="keywords" content="keyword1, keyword2, keyword3">
     <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -11,7 +14,9 @@
 
 <?php
 require_once '../Logic/LoginLogic.php';
-require_once '../Logic/UserLogic.php'
+require_once '../Logic/UserLogic.php';
+require_once '../Logic/TicketLogic.php';
+require_once '../DAL/TicketDAL.php';
 ?>
 
 <section class="topnav">
@@ -34,33 +39,27 @@ require_once '../Logic/UserLogic.php'
 
         <?php
         if (isset($_SESSION['LoggedIn'])) {
-
             echo '<a href="Logout.php">Logout</a>';
         } else {
-            echo '<a href="Register.php">Register</a>';
-            echo '<a class = "active" href="Login.php">Login</a>';
+            echo ' <a href="Register.php">Register</a>';
+            echo '<a href="Login.php">Login</a>';
         }
 
         ?>
-        <a href="Shoppingcart.php">Shopping Cart</a>
+        <a class="active" href="Shoppingcart.php">Shopping Cart</a>
     </section>
 </section>
-
-
-<section class="MainLogin" id="mainlogin">
-    <header class="titleHeaders">
-        <h1>Login</h1></header>
-
-    <section class="login-container">
-        <form id="loginForm" method="post">
-            <label>Email</label>
-            <input type="email" placeholder="example@example.com" name="loginEmail">
-            <label>Password</label>
-            <input type="password" name="loginPassword">
-            <button type="submit" name="login" form="loginForm" value="Submit">Login</button>
-            <a href="ForgotPassword.php"<label>Forgot Password?</label></a>
-        </form>
-    </section>
+<section class="Main" id="maincontent">
+    <?php if (isset($_SESSION['Products'])) { ?>
+    <form action="MakePdf.php" method="post">
+        <button id="pdf" type="submit">
+            Download PDF
+        </button>
+    </form>
+    <?php }
+    else {
+        ?><label class="Text8" id="Text8">How did you get here? </label> <?php
+    } ?>
 </section>
 
 
