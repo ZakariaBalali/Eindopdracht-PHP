@@ -62,6 +62,9 @@ if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
             <input type="text" placeholder="e.g. John" name="searchName">
             <button type="submit" name="searchNameBtn" form="searchNameForm" value="Submit">Search by name</button>
         </form>
+        <form id="downloadCsv" method="post">
+            <button type="submit" name="downloadCsvBtn" form="downloadCsv" value="Submit">Download Csv</button>
+        </form>
     </section>
 
 </section>
@@ -102,6 +105,13 @@ if (!isset($_SESSION['LoggedIn']) || $user[0]->getIsAdmin() == 0) {
             $users = (array)$userLogic->SearchUserByName($_POST['searchName']);
 
         }
+        if(isset($_POST['downloadCsvBtn'])){
+
+            header('Location: ../View/DownloadCsv.php');
+
+
+        }
+
 
         foreach ($users as $user) {
             echo '<tr>';

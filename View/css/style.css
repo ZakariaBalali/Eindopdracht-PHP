@@ -79,8 +79,8 @@ body {
 }
 
 .airlineLogo {
-    width: 20px;
-    height: 20px !important;
+    width: 150px;
+    height: 150px !important;
 }
 
 /* Style the input container */
@@ -320,4 +320,27 @@ body {
 
 .uploadedImage {
     width: 100px;
+}
+
+.ticketSection{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #4CAF50;
+    height: 400px;
+    width: 400px;
+}
+
+.rightSideTicketBuy{
+    display: none;
+}
+
+.leftSideTicketBuy{
+    display: none;
+}
+
+.swapButton{
+    background-color: #2196F3;
+    width: 100px;
+    height: 50px;
+
 }

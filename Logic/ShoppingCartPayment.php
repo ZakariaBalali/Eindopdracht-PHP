@@ -25,7 +25,7 @@ function CallMollieAPI($price)
 
         ],
         "description" => "$description",
-        "redirectUrl" => "http://localhost/Frontend/Eindopdracht/View/PaymentSuccess.php",
+        "redirectUrl" => "http://636655.infhaarlem.nl/View/PaymentSuccess.php",
         "webhookUrl" => "http://636655.infhaarlem.nl/Logic/Webhook.php",
 
     ]);

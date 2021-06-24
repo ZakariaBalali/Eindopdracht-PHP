@@ -76,6 +76,7 @@ require_once '../DAL/TicketDAL.php';
                    id="AddToCartButton<?php echo $ticket->getTicketID()?>">Add ticket to shopping cart</button><?php
         echo '</div>';
         echo '</div>';
+        echo '</form>';
         }
         ?>
 </section>

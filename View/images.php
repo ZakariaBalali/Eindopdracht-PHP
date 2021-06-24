@@ -56,9 +56,14 @@ $files = scandir($dir, 1);
 ?>
 <br>
 <h1>UPLOAD FILES</h1> <br>
-<form action="Upload.php" method="post" enctype="multipart/form-data"> Select image to upload:<input
+<form action="Upload.php" method="post" enctype="multipart/form-data">
+    <p>Put name for image</p>
+    <input type="text" id="imageName" name="imageName" required>
+    Select image to upload:<input
             type="file" name="fileToUpload" id="fileToUpload"><input type="submit" value="Upload
-Image" name="submit"></form>
+Image" name="submit">
+
+</form>
 
 <h1>Uploaded images</h1> <br>
 <?php
